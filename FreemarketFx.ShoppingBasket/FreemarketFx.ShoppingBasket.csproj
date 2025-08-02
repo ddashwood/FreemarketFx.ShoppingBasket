@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FreemarketFx.ShoppingBasket.Application\FreemarketFx.ShoppingBasket.Application.csproj" />
+    <ProjectReference Include="..\FreemarketFx.ShoppingBasket.Database\FreemarketFx.ShoppingBasket.Database.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".http\app.http" />
+  </ItemGroup>
+
+</Project>

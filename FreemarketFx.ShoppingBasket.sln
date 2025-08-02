@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemarketFx.ShoppingBasket", "FreemarketFx.ShoppingBasket\FreemarketFx.ShoppingBasket.csproj", "{E68B11DA-967B-48B4-AFBB-7EFB3F026BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemarketFx.ShoppingBasket.Models", "FreemarketFx.ShoppingBasket.Models\FreemarketFx.ShoppingBasket.Models.csproj", "{5FAC2041-ED16-4F18-8D88-340E940888F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemarketFx.ShoppingBasket.Database", "FreemarketFx.ShoppingBasket.Database\FreemarketFx.ShoppingBasket.Database.csproj", "{D24E48D6-91B1-4416-B692-1D936B4064DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemarketFx.ShoppingBasket.Application", "FreemarketFx.ShoppingBasket.Application\FreemarketFx.ShoppingBasket.Application.csproj", "{53802864-81EC-475E-8737-DB9E6E80A2DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemarketFx.ShoppingBasket.UnitTests", "FreemarketFx.ShoppingBasket.UnitTests\FreemarketFx.ShoppingBasket.UnitTests.csproj", "{92E5B48B-C651-4E80-8B94-470E6B58D0C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E68B11DA-967B-48B4-AFBB-7EFB3F026BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E68B11DA-967B-48B4-AFBB-7EFB3F026BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E68B11DA-967B-48B4-AFBB-7EFB3F026BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E68B11DA-967B-48B4-AFBB-7EFB3F026BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAC2041-ED16-4F18-8D88-340E940888F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAC2041-ED16-4F18-8D88-340E940888F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAC2041-ED16-4F18-8D88-340E940888F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAC2041-ED16-4F18-8D88-340E940888F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24E48D6-91B1-4416-B692-1D936B4064DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24E48D6-91B1-4416-B692-1D936B4064DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24E48D6-91B1-4416-B692-1D936B4064DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24E48D6-91B1-4416-B692-1D936B4064DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53802864-81EC-475E-8737-DB9E6E80A2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53802864-81EC-475E-8737-DB9E6E80A2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53802864-81EC-475E-8737-DB9E6E80A2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53802864-81EC-475E-8737-DB9E6E80A2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E5B48B-C651-4E80-8B94-470E6B58D0C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E5B48B-C651-4E80-8B94-470E6B58D0C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E5B48B-C651-4E80-8B94-470E6B58D0C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E5B48B-C651-4E80-8B94-470E6B58D0C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30454A53-4151-44AF-9877-3C57008B4E68}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,111 @@
+@root = https://localhost:7208
+
+# @name createBasket
+POST {{root}}/api/Basket
+Content-Type: application/json
+
+{
+    "BasketName": "Example Basket"
+}
+
+###
+
+# Add item to basket
+
+# @name createBasketItem
+POST {{root}}/api/BasketItem
+Content-Type: application/json
+
+{
+    "BasketId": "{{createBasket.response.body.$.basketId}}",
+    "Description": "First basket item",
+    "BasePricePerItem": 10.99
+}
+
+###
+
+# Add multiple of same item to basket
+POST {{root}}/api/BasketItem
+Content-Type: application/json
+
+{
+    "BasketId": "{{createBasket.response.body.$.basketId}}",
+    "Description": "Second basket item",
+    "BasePricePerItem": 5.99,
+    "Quantity": 3
+}
+
+###
+
+# Add item with discount to basket
+POST {{root}}/api/BasketItem
+Content-Type: application/json
+
+{
+    "BasketId": "{{createBasket.response.body.$.basketId}}",
+    "Description": "Item with discount",
+    "BasePricePerItem": 10.00,
+    "DiscountPercent": 60
+}
+
+###
+
+# Add multiple items to basket
+POST {{root}}/api/BasketItem/Bulk
+Content-Type: application/json
+
+{
+    "BasketId": "{{createBasket.response.body.$.basketId}}",
+    "Items": [
+        {
+            "Description": "First bulk basket item",
+            "BasePricePerItem": 7.99
+        },
+        {
+            "Description": "Bulk item with discount",
+            "BasePricePerItem": 10.00,
+            "Quantity": 2,
+            "DiscountPercent": 20
+        }
+    ]
+}
+
+###
+
+# Delete a basket item.
+DELETE {{root}}/api/BasketItem/{{createBasketItem.response.body.$.basketItemId}}
+
+###
+
+# Add a discount code to the basket
+PUT {{root}}/api/Basket/Discount
+Content-Type: application/json
+
+{
+    "BasketId": "{{createBasket.response.body.$.basketId}}",
+    "DiscountPercent": 10,
+    "DiscountCode": "SUMMER10"
+}
+
+###
+
+# Add shipping cost to the UK
+PUT {{root}}/api/BasketShipping/{{createBasket.response.body.$.basketId}}
+Content-Type: application/json
+
+{
+    "ShippingCost": 2.40
+}
+
+###
+
+# Add shipping cost to another country
+PUT {{root}}/api/BasketShipping/{{createBasket.response.body.$.basketId}}/FR
+Content-Type: application/json
+
+{
+    "ShippingCost": 3.40
+}
+
+###
+GET {{root}}/api/Basket/{{createBasket.response.body.$.basketId}}
