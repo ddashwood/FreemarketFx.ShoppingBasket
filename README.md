@@ -72,7 +72,7 @@ The principles of REST have been broadly followed in designing
 the API. However, it should be noted that many PUT and POST
 requests create or update resourcese which can't be accessed by
 a corresponding GET request as would be normal in REST. Instead,
-the resourcds are included in the response to the GET request to
+the resources are included in the response to the GET request to
 retrieve the Basket details. This is largely because of time
 constraints - it was felt that this implementation meets all the
 requirements of the project, and allows it to be built within the
