@@ -97,13 +97,13 @@ Centralised Package Management has been used to prevent mis-matches
 of Nuget package versions between different projects. See
 `Directory.Packages.props` for details.
 
-Package Source Mapping has been used. Although the benefits of this
-won't be apparent whilst there is only a single Nuget source, the use
-of Package Sourcee Mapping is considered best practice so that if, in
-future, further Nuget sources are added, we can explicitly state which
-package comes from which source, preventing a malicious (or accidental)
-actor from publishing a package to a public source with the same name
-as a package we are using from a private source.
+Package Source Mapping has been used. See `nuget.config` for details.
+Although the benefits of this won't be apparent whilst there is only
+a single Nuget source, the use of Package Sourcee Mapping is considered
+best practice so that if, in future, further Nuget sources are added,
+we can explicitly state which package comes from which source, preventing
+a malicious (or accidental) actor from publishing a package to a public
+source with the same name as a package we are using from a private source.
 
 ### Future Enhancements
 
