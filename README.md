@@ -70,7 +70,7 @@ other countries
 
 The principles of REST have been broadly followed in designing
 the API. However, it should be noted that many PUT and POST
-requests create or update resourcese which can't be accessed by
+requests create or update resources which can't be accessed by
 a corresponding GET request as would be normal in REST. Instead,
 the resources are included in the response to the GET request to
 retrieve the Basket details. This is largely because of time
