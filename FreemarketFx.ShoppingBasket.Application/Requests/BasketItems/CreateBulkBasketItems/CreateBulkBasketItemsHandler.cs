@@ -1,12 +1,14 @@
 ﻿using FreemarketFx.ShoppingBasket.Database;
 using FreemarketFx.ShoppingBasket.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace FreemarketFx.ShoppingBasket.Application.Requests.BasketItems.CreateBulkBasketItems;
 
 internal class CreateBulkBasketItemsHandler
 (
-    ShoppingBasketContext context
+    ShoppingBasketContext context,
+    ILogger<CreateBulkBasketItemsHandler> logger
 ) : ICreateBulkBasketItemsHandler
 {
     public async Task<CreateBulkBasketItemsResponse> CreateBulkBasketItemsAsync(CreateBulkBasketItemsRequest request)
@@ -40,6 +42,11 @@ internal class CreateBulkBasketItemsHandler
             }
 
             await tran.CommitAsync();
+
+            foreach (var result in results)
+            {
+                logger.LogInformation("Added {itemDescription} to basket {basketId}", result.Description, result.BasketId);
+            }
 
             return CreateBulkBasketItemsResponse.Success(results);
         }
