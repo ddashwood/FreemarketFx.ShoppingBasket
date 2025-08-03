@@ -33,7 +33,7 @@ the application will, upon startup, create the database
 and run the migrations if necessary to ensure that the
 database exists and is in the correct state.
 
-## Running the Application
+## Demonstrating the Application
 
 The file `FreemarketFx.ShoppingBasket/.http/app.http`
 contains a series of HTTPS calls which, if called in order,
