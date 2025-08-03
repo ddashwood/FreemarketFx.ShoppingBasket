@@ -121,6 +121,7 @@ These include:
 - Horizontal scalability
 - Integration testing
     - To include the "happy path", and also invalid API calls
+- Caching
 
 #### Validation and Logging
 
